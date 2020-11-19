@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Flower{
+
+        }
+        //JSON Object
+        const shinobi={
+            name:'shinobi',
+            age:20,
+            hometown:'神奈',
+            isSingle:false,
+            girlFriend:'阿巴阿巴',
+            house:null,
+        }
+        //JS 常用数据类型
+        const xuansa={
+            name:'xuansa',  //String字符串类型
+            age:20, //Number数值类型
+            hobbies:['sing','dance','rap','basketball'],//Array数组类型,JS里没有独立的数组对象
+            //Array Obejct
+            hometown:'阿巴阿巴',
+            isSingle:true,  //boolean布尔类型
+            girlFriend:undefined,   //未定义类型 无概念 未声明的
+            house:null, //空 已声明但未赋值
+            //函数对象
+            //定义形式参数 gf 类型是对象
+            sendFlower:function (gf){
+                const flowers=new Flower(11);
+                gf.receiveFlower(flowers,this);
+                //此处用this代替本身的xuansa
+            }
+        }
+        const xm={
+            name:'小美',
+            xq: 50,
+            age: 19,
+            receiveFlower:function (flower,sender){
+                if(xm.xq<80){
+                    console.log('丑拒');
+                }
+                else{
+                    console.log('万达走一波');
+                }
+                // console.log(this.name+'收到了来自'+sender.name+'的花');
+            }
+        }
+        const xh={
+            name:'小红',
+            hometown:'阿巴阿巴',
+            receiveFlower:function(flower,sender){
+                // console.log('收到了花');
+                if(sender.name=='xuansa'){
+                // console.log('阿巴阿巴阿巴');
+                //心情好坏的判断
+                //定时器setTimeout
+                setTimeout(function(){
+                    xm.xq=100;
+                    xm.receiveFlower(flower,sender);
+                },2000)
+                    // xm.receiveFlower(flower,sender);
+                }
+                else{
+                    console.log(this.name+'收到了来自'+sender.name+'的花');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
