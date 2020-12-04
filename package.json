@@ -1,0 +1,20 @@
+{
+  "name": "zzp_fullstack",
+  "version": "1.0.0",
+  "description": "SHINOBI的WEB全栈学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Error404-Shinobi/zzp_fullstack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Error404-Shinobi/zzp_fullstack/issues"
+  },
+  "homepage": "https://github.com/Error404-Shinobi/zzp_fullstack#readme"
+}
