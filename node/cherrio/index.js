@@ -1,5 +1,6 @@
-let request = require('node-fetch');//第三方npm
+// let request = require('request-promise');//第三方npm
 //上条不可用时可将require中换成http这个内置库,换成node-fetch库也可
+const fetch = require("node-fetch");
 let cheerio = require('cheerio');
 
 let url = 'https://movie.douban.com/top250';
